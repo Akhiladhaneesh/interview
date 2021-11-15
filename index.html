@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <title>Analytics</title>
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <!-- OWN CSS -->
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+<div class="container">
+  
+<!-- line chart -->
+ <section class="line">
+     <div class="row">
+<div class="col-2">
+        <h3>(Assets Title/Site Name) V/s Count</h3>
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>   
+              
+              
+              <script>
+                    var xValues = ["Clipboard","Handshake","Man-with-tie","Head-with-headset","24-hour-sign","Calculator","Car-Showroom","Certificate","Mobile-phone-with-no-bittons","Six-people","Art-science","Art","Branch-Locations","Business-growth","Diversity","Health","Renewable-energy","Water destination","battery-storage","New-technology"];
+                    var yValues = [29,29,29,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,28,27];
+                    
+                    new Chart("myChart", {
+                      type: "line",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          fill: false,
+                          lineTension: 0,
+                          backgroundColor: "rgba(0,0,255,1.0)",
+                          borderColor: "red",   
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {display: false},
+                        scales: {
+                          yAxes: [{ticks: {min: 20, max:40}}],
+                        }
+                      }
+                    });
+                    </script>
+</div>
+
+     </div>
+
+</section>
+
+ <!-- doughnut chart --> 
+<section class="dot">
+    <div class="row">
+        <div class="col-2">
+            
+                <h3>Country Name V/s Total Asset Downloaded</h3>
+                <canvas id="myChart1"></canvas>
+        
+                <script>
+                var xValues = ["Saudi Arabia", "UAE", "Default", "United Kingdom", "Egypt","Monaco","United State","India","Philippines","France","Japan","Canada","Netherlands","Romania","Swizerland","Jordan","Ukraine"];
+                var yValues = [203,110,72,45,34,14,13,8,6,6,5,4,3,2,1,1,1];
+                var barColors = [
+                  "#b91d47",
+                  "#00aba9",
+                  "#1e7145",
+                  "#B2FF33",
+                 "#33FF61",
+                 "#33FFEC" ,
+                 "#2b5797",
+                  "#e8c3b9",
+                  "#F933FF",
+                  "#3C33FF",
+                  "#FF7733",
+                  "#A79E9A",
+                  "#1ED6F7",
+                  "#F7A51E",
+                  "#D0F71E",
+                  "#F71E4C",
+                  "#F61710"
+                ];
+          
+                new Chart("myChart1", {
+                  type: "doughnut",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    title: {
+                      display: true,
+                      
+                    }
+                  }
+                });
+            
+                </script>
+                        
+
+        </div>
+    </div>
+</section>
+
+ <!-- line chart --> 
+
+    <section class="line">
+<div class="row">
+<div class="col-2">
+    <h3>
+        Site Name V/s Views
+    </h3>
+    <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+    var xValues = ["Default","Motors-Saudi Arabia","Corporate-Saudi Arabia","Corporate-75th Anniversary-Saudi Arabia","Logistics-Saudi Arabia","Motors-Toyota-Saudi Arabia","Corporate-UAE","Corporate-JIMCO-Monaco","Properties-Saudi Arabia","Manchinery-Saudi Arabia"];
+    var yValues = [868614,1614,1262,544,311,295,223,216,181,169];
+   
+
+           
+            new Chart("myChart3", {
+              type: "line",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  fill: false,
+                  lineTension: 0,
+                  backgroundColor: "rgba(0,0,255,1.0)",
+                  borderColor: "red",   
+                  data: yValues
+                }]
+              },
+              options: {
+                legend: {display: false},
+                scales: {
+                  yAxes: [{ticks: {min: 100, max:900000}}],
+                }
+              }
+            });
+            </script>
+
+</div>
+
+</div>      
+
+</div>
+</section>
+
+
+
+
+       
+
+
+
+ <!-- line chart --> 
+    <section class="bar">
+        <div class="row">
+<div class="col-2">
+    
+        <h3>Country Name V/s Views</h3>
+        <h2>Asset</h2>
+                <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>   
+                <script>
+                    var xValues = ["Saudi Arabia","UAE","Egypt","Default","United Kingdom","Monaco","United State","Japan","France","Romania","Phillppines","Canada","Pakistan","India","Netherlands","Jordan","Switzerland","Lebanon","China","Ukraine","Iran Islamic Repulic of","Spain"];
+                    var yValues = [2872,1180,695,657,653,322,153,53,49,46,41,32,23,22,20,16,5,4,3,2,1,1];
+                    
+                    new Chart("myChart4", {
+                      type: "line",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          fill: false,
+                          lineTension: 0,
+                          backgroundColor: "rgba(0,0,255,1.0)",
+                          borderColor: "red",   
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {display: false},
+                        scales: {
+                          yAxes: [{ticks: {min: 20, max:40}}],
+                        }
+                      }
+                    });
+                    </script>
+              
+
+        </div>
+
+        </div>
+        </section>
+
+ <!-- pie chart --> 
+        <section class="pie">
+
+            <div class="row">
+<div class="col-2">
+   
+        <h3>Country Name V/s Views</h3>
+        <h4>Guidelines</h4>
+        <canvas id="myChart5" style="width:100%;max-width:700px"></canvas>
+
+<script>
+var xValues = ["Saudi Arabia","Egypt","Default","UAE","Labanon","United Kingdom","Monaco","Canada","Jordan","China","France"];
+var yValues = [242,93,57,54,24,14,5,4,2,2,1];
+                    
+
+var barColors = [
+"#b91d47",
+"#00aba9",
+"#2b5797",
+"#e8c3b9",
+"#1e7145",
+"#B2FF33",
+     "#33FF61",
+     "#33FFEC" ,
+     "#2b5797",
+      "#e8c3b9",
+      "#F933FF",
+      "#3C33FF",
+      "#FF7733",
+      "#A79E9A"
+     
+];
+
+new Chart("myChart5", {
+type: "pie",
+data: {
+labels: xValues,
+datasets: [{
+  backgroundColor: barColors,
+  data: yValues
+}]
+},
+options: {
+title: {
+  display: true,
+ 
+}
+}
+});
+</script>
+   </div>           
+</div>
+        </section>
+
+
+
+
+
+    <!-- JS Libraries --> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <!-- own js -->
+</div> 
+</body>
+
+</html>
+
